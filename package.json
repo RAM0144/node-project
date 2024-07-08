@@ -1,0 +1,21 @@
+{
+  "name": "fsd56w-t-node",
+  "version": "1.0.0",
+  "description": "Sample node project for APIs writing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "basic-server": "node --watch inbuilt-http-server.js",
+    "express-server": "node --watch express-server.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "lodash": "^4.17.21",
+    "mongodb": "^6.8.0"
+  }
+}
