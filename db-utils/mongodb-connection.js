@@ -14,19 +14,19 @@ const dbName = process.env.DB_NAME || "local-fsd56we-tamil";
   const dbUsr = process.env.DB_USERNAME || "";
   const dbPassword = process.env.DB_PASSWORD || "";
   const dbCluster = process.env.DB_CLUSTER || ""
-// Creating a client instance
 
+  // Creating a client instance
 const localUrl = `mongodb://${dbUrl}`;
 
 const cloudUrl = `mongodb+srv://${dbUsr}:${dbPassword}@${dbCluster}/?retryWrites=true&w=majority&appName=Cluster0`
  
     //-local URL-MongoDb
 
-// const client = new MongoClient(localUrl);
+const client = new MongoClient(cloudUrl);
 
    //-Cloud URL-MongoDb Cloud Atlas
 
-const client = new MongoClient(cloudUrl);
+// const client = new MongoClient(cloudUrl);
 
 // Selecting a particular DB-Name
 

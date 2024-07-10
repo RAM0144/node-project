@@ -1,6 +1,7 @@
 import express from "express";
-
+import cors from "cors"
 import  connectToDB  from "./db-utils/mongodb-connection.js";
+import connectViaMongoose from "./db-utils/mongoose-connection.js";
 
 // import studentsRouter from "./routes/students.js";
 // import teacherRouter from "./routes/teachers.js";
@@ -13,9 +14,15 @@ const server = express();
 // Body Parsing Middleware ->postman api data view on terminal
 server.use(express.json());
 
+server.use(cors()); // using the cors middleware to make our apis CORS complaint
+
 // connecting to the DB before sever starts
 // Top level await
 await connectToDB();
+
+// Mongoose connection
+
+await connectViaMongoose();
 
 
 // server.get("/", (req, res) => {
@@ -44,6 +51,8 @@ await connectToDB();
 server.use("/students", studentsDbRouter);
 
 server.use("/teachers", teachersDbRouter);
+
+
 
 const port = 5500;
 
