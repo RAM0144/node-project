@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors"
 import jwt from "jsonwebtoken"
+import dotenv from "dotenv";
+
 import  connectToDB  from "./db-utils/mongodb-connection.js";
 import connectViaMongoose from "./db-utils/mongoose-connection.js";
 
@@ -9,7 +11,6 @@ import connectViaMongoose from "./db-utils/mongoose-connection.js";
 import studentsDbRouter from "./routes/students-db.js";
 import teachersDbRouter from "./routes/teachers-db.js";
 import authRouter from "./routes/auth.js";
-import dotenv from "dotenv";
 
 
 
