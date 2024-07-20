@@ -22,7 +22,7 @@ const cloudUrl = `mongodb+srv://${dbUsr}:${dbPassword}@${dbCluster}/${dbName}?re
 const connectViaMongoose = async () => {
     try {
         await mongoose.connect(cloudUrl);
-        console.log("Mongoose Cnnected Successfully");
+        console.log("Mongoose Connected Successfully");
     } catch (error) {
         console.log("Error Connecting to database", error)
         process.exit(1);
